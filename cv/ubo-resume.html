@@ -549,5 +549,20 @@
                 elem.innerHTML = stars;
             });
 
+     var p_skills = {"p-programmation": 80,"p-tech-web":80, "p-data-sience": 60, "p-data-bases": 80,"p-analyse":100};
+    var elems = document.querySelectorAll(".pipes");
+    [].forEach.call(elems, function (elem) {
+                var n = p_skills[elem.attributes.id.value];
+                var canvas = document.createElement("canvas");
+                canvas.style.width="200px";
+                canvas.style.height="10px";
+                canvas.style.border = "1px solid grey";
+                var div = document.getElementById("yes");
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "#0073b1";
+                ctx.fillRect(0,0,3*n,200);
+                elem.appendChild(canvas);
+            });
+
 </script>
 </html>
