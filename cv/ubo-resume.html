@@ -520,7 +520,17 @@
                 a.style.height = '';
             }, 350);
         }, false);
+    }
+
+        function display(elem) {
+        elem.closest("div").getElementsByTagName("div")[0].style.display = "block";
 
     }
+
+    function hide(elem) {
+        elem.closest("div").getElementsByTagName("div")[0].style.display = "";
+    }
+
+
 </script>
 </html>
