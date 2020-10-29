@@ -468,5 +468,59 @@
 
 
 </body>
+<script>
+        /* - 1
+      document.getElementById('details').onclick = function(e){ 
+      var elems = document.querySelectorAll(".desc");
+      [].forEach.call(elems, function(el) {
+          el.className = el.className.replace("desc", "");
+      });
+    }*/
+        /* -2 
+  
+    
+    var elements = document.getElementsByClassName("year details");
 
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('click', function(e){
+        var elems = document.querySelectorAll(".descyes");
+          [].forEach.call(elems, function(el) {
+            el.className = el.className.replace("descyes", "desc");
+        });
+        var a =  this.parentElement.parentElement;
+          a.getElementsByTagName('span')[4].className = "descyes";
+         }, false);
+    }
+*/
+    /*-3 */
+    var elements = document.getElementsByClassName("year details");
+
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('click', function (e) {
+            var elems = document.querySelectorAll(".toggle-content");
+
+            [].forEach.call(elems, function (elem) {
+                if (elem.classList.contains('is-visible')) {
+                    elem.style.height = elem.scrollHeight + 'px';
+                    window.setTimeout(function () {
+                        elem.style.height = '0';
+                    }, 1);
+                    window.setTimeout(function () {
+                        elem.classList.remove('is-visible');
+                    }, 350);
+                }
+            });
+            var a = this.parentElement.parentElement.getElementsByTagName('span')[4];
+            a.style.display = 'block';
+            var height = a.scrollHeight + 'px';
+            a.style.display = '';
+            a.classList.add('is-visible');
+            a.style.height = height;
+            window.setTimeout(function () {
+                a.style.height = '';
+            }, 350);
+        }, false);
+
+    }
+</script>
 </html>
