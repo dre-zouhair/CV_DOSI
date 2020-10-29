@@ -1,0 +1,90 @@
+html, body {font-family:Helvetica, Arial, sans-serif}
+.descyes{
+	display: contents;
+}
+.desc{
+	display: none;
+}
+
+.toggle-content {
+	display: none;
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: height 350ms ease-in-out, opacity 750ms ease-in-out;
+}
+
+.show-slow {
+	transition: height 2000ms ease-in-out, opacity 2500ms ease-in-out;
+}
+
+.toggle-content.is-visible {
+	display: block;
+	height: auto;
+	opacity: 1;
+}
+
+
+    .tooltip{
+        position:absolute;
+        margin:auto;
+        border:1px solid black;
+        display:none;
+        background-color:black;
+        color:white;
+        border-radius :10px;
+        text-align : center;
+        padding: 5px;
+          transform: translateY(-10px);
+  		opacity: 1;
+   		 transition: .3s linear;
+  		animation: odsoky 1s ease-in-out infinite  alternate;
+  		transform: translateY(6px);
+    }
+    .group{
+    	display: inline-flex;
+    }
+    .item-group{
+    	margin: 2px;
+    }
+    .fa{
+    	color: #0073b1;
+    }
+    .stars{
+    	display: inline-flex;
+   		margin-right: 10%;
+   		float: right;
+    }
+    .fa-star{
+    	color: #FFDF00;
+    }
+    .footer{
+    	text-align: center;
+    }
+    .fa-facebook{
+    	color :#4267B2;
+    }
+    .fa-github{
+    	color:black;
+    }
+    .fa-linkedin{
+    	color: #0073b1;
+    }
+    .bold{
+    	 font-weight: bold;
+    }
+    .pipe {
+   	background-color:grey;
+    width:200px;
+    height: 10px;
+    margin:2px;
+		}
+
+#background {
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #0073b1;  
+}
+    
