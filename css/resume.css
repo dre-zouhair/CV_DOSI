@@ -79,7 +79,9 @@ html, body {font-family:Helvetica, Arial, sans-serif}
     height: 10px;
     margin:2px;
 		}
-
+.end{
+            color: grey;
+        }
 #background {
     top: 0px;
     left: 0px;

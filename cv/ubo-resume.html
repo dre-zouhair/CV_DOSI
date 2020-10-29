@@ -531,6 +531,23 @@
         elem.closest("div").getElementsByTagName("div")[0].style.display = "";
     }
 
+    var skills = {programmation: 4,"tech-web":4, "data-sience": 3, "data-bases": 4,analyse:5};
+   
+    var elems = document.querySelectorAll(".stars");
+    [].forEach.call(elems, function (elem) {
+                var n = skills[elem.attributes.id.value];
+                var stars = '';
+               
+                for (var i = 0; i < n; i++) {
+                  
+                  stars+= '<i class="fa fa-star"> </i>';
+                }
+
+                for (var i = n ; i < 5; i++) {
+                  stars+= '<i class="fa fa-star end"> </i>';
+                }
+                elem.innerHTML = stars;
+            });
 
 </script>
 </html>
